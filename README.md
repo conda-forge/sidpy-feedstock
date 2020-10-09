@@ -5,11 +5,13 @@ Home: https://github.com/pycroscopy/sidpy
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sidpy-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python utilities for storing, visualizing, and processing Spectroscopic and Imaging Data (SID)
 
+Development: https://github.com/pycroscopy/sidpy
 
+Documentation: https://pycroscopy.github.io/sidpy/about.html
 
 Current build status
 ====================
