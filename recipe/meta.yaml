@@ -1,5 +1,5 @@
 {% set name = "sidpy" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b904330cdf554197f036c335a54ca088619b1a406126e5253e0f5dfd33605f20
+  sha256: 44b59c0bf9642f82197e3fd18434785671e2ef1d8aff115c8f3a2c1c8aff6408
 
 build:
   noarch: python
