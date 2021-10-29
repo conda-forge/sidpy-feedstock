@@ -1,5 +1,5 @@
 {% set name = "sidpy" %}
-{% set version = "0.0.5" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b904330cdf554197f036c335a54ca088619b1a406126e5253e0f5dfd33605f20
+  sha256: 98d0809101bea2132e6f48fdeb295eb20f8925018ae297792f13d96e6a0d6a40
 
 build:
   noarch: python
@@ -25,8 +25,10 @@ requirements:
     - dask >=0.10
     - h5py >=2.6.0
     - matplotlib-base >=2.0.0
+    - distributed >=2.0.0
     - psutil
     - six
+    - ipyfilechooser >=0.0.6
     - joblib >=0.11.0
     - ipywidgets >=5.2.2
     - ipython
