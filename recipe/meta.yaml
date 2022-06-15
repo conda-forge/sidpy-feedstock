@@ -34,6 +34,8 @@ requirements:
     - joblib >=0.11.0
     - ipywidgets >=5.2.2
     - ipython
+    - scikit-learn
+    - scipy
 
 test:
   imports:
@@ -58,3 +60,4 @@ extra:
     - ramav87
     - gduscher
     - carlodri
+    - jan-janssen
