@@ -149,6 +149,7 @@ Feedstock Maintainers
 
 * [@carlodri](https://github.com/carlodri/)
 * [@gduscher](https://github.com/gduscher/)
+* [@jan-janssen](https://github.com/jan-janssen/)
 * [@ramav87](https://github.com/ramav87/)
 * [@ssomnath](https://github.com/ssomnath/)
 
