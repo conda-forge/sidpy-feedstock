@@ -8,10 +8,12 @@ package:
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0b83037c8c169c55bd6da625413e2280743876207435bfdc264460d1949dbcce
+  patches:
+    - scikitlearn.patch
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -36,6 +38,10 @@ requirements:
 test:
   imports:
     - sidpy
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pycroscopy/sidpy
