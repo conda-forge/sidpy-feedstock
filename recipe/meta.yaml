@@ -10,8 +10,6 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cdee78ea6ccbd40075c34006aa4554268cf358bbcff26e26e643e78acf1d6925
 
-patches:
-    - scikitlearn.patch
 build:
   noarch: python
   number: 0
