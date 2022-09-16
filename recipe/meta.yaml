@@ -1,4 +1,5 @@
 {% set name = "sidpy" %}
+
 {% set version = "0.10.0" %}
 
 package:
@@ -9,6 +10,8 @@ source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: cdee78ea6ccbd40075c34006aa4554268cf358bbcff26e26e643e78acf1d6925
 
+patches:
+    - scikitlearn.patch
 build:
   noarch: python
   number: 0
@@ -32,10 +35,16 @@ requirements:
     - joblib >=0.11.0
     - ipywidgets >=5.2.2
     - ipython
+    - scikit-learn
+    - scipy
 
 test:
   imports:
     - sidpy
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pycroscopy/sidpy
@@ -52,3 +61,4 @@ extra:
     - ramav87
     - gduscher
     - carlodri
+    - jan-janssen
