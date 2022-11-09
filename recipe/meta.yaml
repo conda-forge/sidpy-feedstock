@@ -1,5 +1,5 @@
 {% set name = "sidpy" %}
-{% set version = "0.11" %}
+{% set version = "0.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 902467da476c9c4bd1e2697ab259bc8f81182d46d1e0dcf15e4373b547808854
+  sha256: 25a7467c5d9d300aa46188e16e0e1ae4ef9404cd3d28e93e5e8d8c24c26f5e0d
   patches:
     - scikitlearn.patch
 
