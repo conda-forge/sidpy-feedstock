@@ -1,5 +1,5 @@
 {% set name = "sidpy" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,9 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 25a7467c5d9d300aa46188e16e0e1ae4ef9404cd3d28e93e5e8d8c24c26f5e0d
-  patches:
-    - scikitlearn.patch
+  sha256: 734a31571ae032137b9f253abd247d00ae121309d41e521f1226785c74aef563
 
 build:
   noarch: python
@@ -36,6 +34,7 @@ requirements:
     - ipython
     - scikit-learn
     - scipy
+    - ase
 
 test:
   imports:
