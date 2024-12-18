@@ -38,6 +38,7 @@ requirements:
     - ase
     - ipykernel
     - ipympl
+    - dill
 
 test:
   imports:
