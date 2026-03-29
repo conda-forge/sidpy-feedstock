@@ -1,27 +1,30 @@
-{% set name = "sidpy" %}
-{% set version = "0.12.8" %}
+schema_version: 1
+
+context:
+  name: sidpy
+  version: 0.12.8
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: ${{ name|lower }}
+  version: ${{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/${{ name }}-${{ version }}.tar.gz
   sha256: d21dda63a156bfaf42abf0576129fef0370f1cbc7535e2adc46a6464d74e8529
 
 build:
+  number: 1
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python {{ python_min }}
+    - python ${{ python_min }}.*
     - pip
     - pytest-runner
     - setuptools
   run:
-    - python >={{ python_min }}
+    - python >=${{ python_min }}
     - numpy >=1.10
     - dask-core >=0.10
     - h5py >=2.6.0
@@ -40,23 +43,25 @@ requirements:
     - ipympl
     - dill
 
-test:
-  imports:
-    - sidpy
-  commands:
-    - pip check
-  requires:
-    - pip
-    - python {{ python_min }}
+tests:
+  - python:
+      imports:
+        - sidpy
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
 
 about:
-  home: https://github.com/pycroscopy/sidpy
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: Python utilities for storing, visualizing, and processing Spectroscopic and Imaging Data (SID)
-  doc_url: https://pycroscopy.github.io/sidpy/about.html
-  dev_url: https://github.com/pycroscopy/sidpy
+  homepage: https://github.com/pycroscopy/sidpy
+  repository: https://github.com/pycroscopy/sidpy
+  documentation: https://pycroscopy.github.io/sidpy/about.html
 
 extra:
   recipe-maintainers:
