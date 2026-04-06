@@ -39,6 +39,7 @@ requirements:
     - ipykernel
     - ipympl
     - dill
+    - dask-ml
 
 test:
   imports:
